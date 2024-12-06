@@ -18,12 +18,7 @@ jobs:
           node-version: '18'
       
       - name: Install dependencies
-        run: |
-          if [ ! -f package-lock.json ]; then
-            npm install
-          else
-            npm ci
-          fi
+        run: npm ci
       
       - name: Build
         run: npm run build
